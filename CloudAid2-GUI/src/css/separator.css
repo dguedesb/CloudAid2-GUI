@@ -1,0 +1,6 @@
+@CHARSET "ISO-8859-1";
+
+.separator{
+    -fx-background-color: #0c0c0c;
+    -fx-background-radius: 2;
+}

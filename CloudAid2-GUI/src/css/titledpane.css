@@ -1,0 +1,42 @@
+@CHARSET "ISO-8859-1";
+.titled-pane {
+    -fx-effect: dropshadow(three-pass-box, #9F9F9F, 15, 0, 0, 0);
+    -fx-animated: true;
+    -fx-text-fill: #FFFFFF;
+}
+ 
+.titled-pane > .title  {
+     -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+}
+ 
+.titled-pane:focused > .title > .arrow-button .arrow {
+    /* do not highlight the title pane arrow on focus */
+    -fx-background-color: #606060;
+}
+ 
+.tree-cell:odd {
+    /* shade every other line in a tree view */
+    -fx-background-color: #EEEEEE;
+}
+ 
+.button {
+    /* buttons do not have rounded corners */
+    -fx-background-radius: 0, 0, 0, 0;
+}
+ 
+.menu-button {
+    /* the left side of the menu button is not rounded */
+    -fx-background-radius: 0 5 5 0, 0 5 5 0, 0 4 4 0, 0 3 3 0;	
+}
+ 
+.combo-box-base  {
+    /* the left side of the combo box is not rounded */
+    -fx-background-radius: 0 5 5 0, 0 5 5 0, 0 4 4 0, 0 3 3 0;	
+}

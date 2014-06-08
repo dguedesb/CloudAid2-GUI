@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="anchor" prefHeight="80.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SendRequestController">
+   <children>
+      <Label fx:id="warninglabel" layoutX="22.0" layoutY="14.0" text="Request is ready, are you sure you want to send it?">
+         <font>
+            <Font name="Comic Sans MS Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="nobutton" layoutX="219.0" layoutY="47.0" mnemonicParsing="false" onAction="#noMethod" prefHeight="25.0" prefWidth="46.0" text="No" />
+      <Button fx:id="yesbutton" layoutX="45.0" layoutY="47.0" mnemonicParsing="false" onAction="#yesMethod" prefHeight="25.0" prefWidth="46.0" text="Yes" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="QuantReqAnchorPane" prefHeight="166.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.QuantReqController">
+   <children>
+      <Button fx:id="closePopupbtn" layoutX="239.0" layoutY="118.0" mnemonicParsing="false" onAction="#closePopup" prefHeight="25.0" prefWidth="99.0" text="Save and Exit!" />
+      <HBox layoutX="14.0" layoutY="14.0">
+         <children>
+            <Label layoutX="26.0" layoutY="22.0" text="Type:">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="quantreqpoptype" layoutX="63.0" layoutY="23.0" text="type">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <CheckBox fx:id="quantreqlimitcheckbox" layoutX="19.0" layoutY="45.0" mnemonicParsing="false" text="Limit">
+         <font>
+            <Font name="Comic Sans MS Bold" size="12.0" />
+         </font>
+      </CheckBox>
+      <ComboBox fx:id="quantreqlimitbox" disable="true" layoutX="77.0" layoutY="42.0" prefWidth="150.0" />
+      <Label layoutX="44.0" layoutY="84.0" text="Value:">
+         <font>
+            <Font name="Comic Sans MS Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="quantreqlimit" disable="true" layoutX="81.0" layoutY="80.0" prefHeight="25.0" prefWidth="78.0" promptText="Value" />
+      <CheckBox fx:id="quantreqexcludecheckbox" layoutX="19.0" layoutY="122.0" mnemonicParsing="false" text="Exclude">
+         <font>
+            <Font name="Comic Sans MS Bold" size="12.0" />
+         </font>
+      </CheckBox>
+      <ImageView fx:id="quantreqpopuphelp1" fitHeight="18.0" fitWidth="15.0" layoutX="2.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/helpbtnimage.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

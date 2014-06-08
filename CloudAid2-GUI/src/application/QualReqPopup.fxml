@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="QualReqAnchorPane" prefHeight="174.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.QualReqController">
+   <children>
+      <Button fx:id="closePopupbtn" layoutX="234.0" layoutY="134.0" mnemonicParsing="false" onAction="#closePopup" prefHeight="25.0" prefWidth="99.0" text="Save and Exit!" />
+      <HBox layoutX="29.0" layoutY="37.0">
+         <children>
+            <Label layoutX="26.0" layoutY="22.0" text="Type:">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="qualreqpoptype" layoutX="63.0" layoutY="23.0" text="type">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <CheckBox fx:id="qualreqvaluecheckbox" layoutX="26.0" layoutY="67.0" mnemonicParsing="false" text="Value">
+         <font>
+            <Font name="Comic Sans MS Bold" size="12.0" />
+         </font>
+      </CheckBox>
+      <TextField fx:id="qualreqvalue" disable="true" layoutX="102.0" layoutY="64.0" prefHeight="25.0" prefWidth="78.0" promptText="Value" />
+      <CheckBox fx:id="qualreqexcludecheckbox" layoutX="26.0" layoutY="105.0" mnemonicParsing="false" text="Exclude">
+         <font>
+            <Font name="Comic Sans MS Bold" size="12.0" />
+         </font>
+      </CheckBox>
+      <ImageView fx:id="qualreqpopuphelp1" fitHeight="18.0" fitWidth="15.0" layoutX="7.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/helpbtnimage.png" />
+         </image>
+      </ImageView>
+      <CheckBox fx:id="qualreqNOTcheckbox" layoutX="26.0" layoutY="137.0" mnemonicParsing="false" text="NOT">
+         <font>
+            <Font name="Comic Sans MS Bold" size="12.0" />
+         </font>
+      </CheckBox>
+      <ImageView fx:id="qualreqpopuphelp2" fitHeight="18.0" fitWidth="15.0" layoutX="7.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/helpbtnimage.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="agsliderval" layoutX="314.0" layoutY="6.0" prefHeight="17.0" prefWidth="15.0" visible="false" />
+      <Label fx:id="agtext" layoutX="115.0" layoutY="5.0" text="At least:" visible="false">
+         <font>
+            <Font name="Comic Sans MS Bold" size="12.0" />
+         </font>
+      </Label>
+      <Slider fx:id="agslider" blockIncrement="1.0" layoutX="174.0" layoutY="7.0" min="1.0" visible="false" />
+   </children>
+</AnchorPane>

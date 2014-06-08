@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorboss" prefHeight="918.0" prefWidth="1024" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainPanelController">
+   <children>
+      <Button fx:id="logoutbtn" layoutX="914.0" layoutY="18.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="77.0" text="logout" />
+      <TabPane fx:id="tabpane" layoutX="18.0" layoutY="122.0" prefHeight="750" prefWidth="941.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="searchsheettab" text="Search Sheet">
+            <content>
+                  <ScrollPane prefHeight="4900" prefViewportHeight="431.0" prefViewportWidth="764.0" prefWidth="4900">
+                     <content>
+                    <AnchorPane fx:id="ssanchorpane" minHeight="0.0" minWidth="0.0" prefHeight="4900" prefWidth="4900">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Name:">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="searchsheetname" layoutX="66.0" layoutY="12.0" promptText="Name your search sheet!" />
+                              <Button fx:id="newST" layoutX="459.0" mnemonicParsing="false" onAction="#addNewST" prefHeight="25.0" prefWidth="175.0" text="Add Service Template" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+            </content>
+          </Tab>
+          <Tab fx:id="resultstab" text="Aggregated Solutions">
+            <content>
+              <AnchorPane fx:id="aggresanchorboss" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.24200278164116829" layoutX="369.0" layoutY="273.0" orientation="VERTICAL" prefHeight="721.0" prefWidth="941.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="352.0" prefWidth="939.0">
+                                 <children>
+                                    <TableView fx:id="tableview" layoutY="6.0" prefHeight="357.0" prefWidth="939.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <ScrollPane layoutY="8.0" prefHeight="323.0" prefWidth="941.0">
+                                      <content>
+                                        <AnchorPane fx:id="anchorres" minHeight="0.0" minWidth="0.0" prefHeight="1500.0" prefWidth="937.0" />
+                                      </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="clearformbtn" layoutX="57.0" layoutY="76.0" mnemonicParsing="false" onAction="#clearForm" prefHeight="25.0" prefWidth="139.0" text="Clear " />
+      <Button fx:id="helpbtn1" layoutX="17.0" layoutY="76.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="23.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="searchbtn" disable="true" layoutX="238.0" layoutY="76.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="139.0" text="Search!" />
+      <Label layoutX="15.0" layoutY="22.0" text="Logged in as:" />
+      <Label fx:id="username" layoutX="92.0" layoutY="22.0" text="User1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="402.0" layoutY="22.0" text="History:">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="historycombobox" layoutX="454.0" layoutY="19.0" prefWidth="150.0" />
+      <Label layoutX="402.0" layoutY="79.0" text="Multi-Criteria Decision Method:">
+         <font>
+            <Font name="Comic Sans MS Bold" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="methodcombobox" layoutX="605.0" layoutY="76.0" prefWidth="150.0" />
+      <Button fx:id="loadbutton" layoutX="628.0" layoutY="19.0" mnemonicParsing="false" onAction="#load" prefHeight="25.0" prefWidth="61.0" text="Load" />
+   </children>
+</AnchorPane>
